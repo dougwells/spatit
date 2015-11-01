@@ -8,8 +8,13 @@ Template.sidebar.helpers({
    }
 });
 
-Template.home.helpers({
-    featured: function(){
-        return Products.find({is_featured: 1});
-    }
-});
+//Template.home.helpers({
+//    featured: function(){
+//        console.log(this);
+//        return Products.find({is_featured: 1});
+//    },
+//
+//    log: function(){
+//        return console.log(this);
+//    }
+//});
