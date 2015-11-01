@@ -5,3 +5,13 @@ footer{
     color: #ffffff;
     text-align: center;
 }
+
+.full {
+    width: 100%;
+}
+
+.product-row {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: #cccccc 1px solid;
+}

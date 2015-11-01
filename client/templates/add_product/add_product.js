@@ -1,5 +1,5 @@
 Template.add_product.events({
-    "submit .add_product": function(event){
+    "submit .add_this_product": function(event){
         var name = event.target.name.value;
         var category = event.target.category.value;
         var description = event.target.description.value;
@@ -11,7 +11,7 @@ Template.add_product.events({
             fsFile=new FS.File(file);
             ProductsImages.insert(fsFile, function(err, result) {
                 if (!err) {
-                    var productImage = '/cfs/files/ProductImages/' + result._id;
+                    var productImage = '/cfs/files/ProductsImages/' + result._id;
                     Products.insert({
                         name: name,
                         category: category,
@@ -45,5 +45,11 @@ Template.add_product.events({
             Router.go('/');
         return false;
     }
+});
+
+FlashMessages.configure({
+    autoHide: true,
+    hideDelay: 2000,
+    autoScroll: true
 });
 
