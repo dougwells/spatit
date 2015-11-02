@@ -15,3 +15,7 @@ footer{
     margin-bottom: 20px;
     border-bottom: #cccccc 1px solid;
 }
+
+.rating {
+    width: 100px;
+}
