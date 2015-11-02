@@ -1,6 +1,10 @@
 <template name="product">
     <div class="row">
         <h4><strong>{{name}}</strong></h4>
+        <p>Average Rating:
+            <img class="rating" src="../img/{{getAvg reviews}}star.png">
+            Number of Reviews: {{getReviewsTotal reviews.length}}
+        </p>
 
 
         <div class="row product-row">
@@ -31,6 +35,7 @@
             <div class="col-md-2">
                 {{review_date}}
             </div>
+            <br>
         {{/each}}
     </div>
 
