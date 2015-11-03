@@ -7,33 +7,35 @@ Template.add_product.events({
 
         var file = $('#productImage').get(0).files[0];
 
-        if (file){
-            fsFile=new FS.File(file);
-            ProductsImages.insert(fsFile, function(err, result) {
-                if (!err) {
-                    var productImage = '/cfs/files/ProductsImages/' + result._id;
-                    Products.insert({
-                        name: name,
-                        category: category,
-                        description: description,
-                        is_featured: is_featured,
-                        image: productImage,
-                        createdAt: new Date()
-                    });
-                }
-            });
+        Meteor.call('addProduct', file, name, category, description, is_featured);
 
-                }else{
-                    var productImage='/img/no_image.png';
-                    Products.insert({
-                        name: name,
-                        category: category,
-                        description: description,
-                        is_featured: is_featured,
-                        image: productImage,
-                        createdAt: new Date()
-                    });
-                }
+        //if (file){
+        //    fsFile=new FS.File(file);
+        //    ProductsImages.insert(fsFile, function(err, result) {
+        //        if (!err) {
+        //            var productImage = '/cfs/files/ProductsImages/' + result._id;
+        //            Products.insert({
+        //                name: name,
+        //                category: category,
+        //                description: description,
+        //                is_featured: is_featured,
+        //                image: productImage,
+        //                createdAt: new Date()
+        //            });
+        //        }
+        //    });
+        //
+        //        }else{
+        //            var productImage='/img/no_image.png';
+        //            Products.insert({
+        //                name: name,
+        //                category: category,
+        //                description: description,
+        //                is_featured: is_featured,
+        //                image: productImage,
+        //                createdAt: new Date()
+        //            });
+        //        }
 
 
             event.target.name.value = "";
