@@ -9,13 +9,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SpatIt!</a>
+                <a class="navbar-brand" href="{{pathFor 'home'}}">SpatIt!</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{pathFor 'home'}}">Home</a></li>
                     <li><a href="{{pathFor 'products'}}">Products</a></li>
                     <li><a href="{{pathFor 'add_product'}}">Add Product</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {{> loginButtons}} <!-- here -->
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
