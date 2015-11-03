@@ -18,13 +18,16 @@
     </div>
 
 
-    <div class="row">
-        <div class="col-md-12 text-right">
-            <a href="{{pathFor 'new_review'}}" class="btn btn-success">Leave a Review</a>
+    {{# if currentUser}}
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <a href="{{pathFor 'new_review'}}" class="btn btn-success">Leave a Review</a>
+            </div>
         </div>
-    </div>
+        <hr>
+    {{/if}}
 
-    <hr>
+
 
     <div class="row">
         <h4>Reviews & Ratings</h4>

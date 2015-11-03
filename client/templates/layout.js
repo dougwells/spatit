@@ -14,7 +14,6 @@ Template.registerHelper('getAvg', function(reviews){
 
         }
         var avg = sum / (reviews.length);
-        console.log(Math.round(avg).toString());
         return Math.round(avg).toString();
 
     }else{
