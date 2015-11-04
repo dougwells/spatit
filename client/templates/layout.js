@@ -28,3 +28,8 @@ Template.registerHelper('getReviewsTotal', function(reviews){
         return 0;
     }
 });
+
+Template.registerHelper('formatDate', function(date){
+    return moment(date).format("MM-DD-YYYY");
+    }
+);
